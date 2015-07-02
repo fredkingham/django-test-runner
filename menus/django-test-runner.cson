@@ -13,8 +13,8 @@
       'label': 'django-test-runner'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'django-test-runner:toggle'
+          'label': 'run all tests'
+          'command': 'django-test-runner:run-all-tests'
         }
       ]
     ]
