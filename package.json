@@ -2,7 +2,7 @@
   "name": "django-test-runner",
   "author": "Fred Kingham <fredkingham@gmail.com>",
   "main": "./lib/django-test-runner",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "allows you to run tests directly from atom, including specific modules/methods",
   "keywords": [],
   "repository": "https://github.com/fredkingham/django-test-runner",
