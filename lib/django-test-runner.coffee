@@ -22,11 +22,6 @@ module.exports = DjangoTestRunner =
       description: 'custom python executable (for virtualenv etc)'
       default: 'python'
 
-    routeToManage:
-      type: 'string'
-      description: 'root to manage.py if not in the top directory'
-      default: 'manage.py'
-
   activate: (state) ->
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.commands.add 'atom-workspace', 'django-test-runner:run-all-tests': => @runTests()
@@ -43,8 +38,7 @@ module.exports = DjangoTestRunner =
 
   getCommand: (additionalParameters) ->
     pythonExec = atom.config.get('django-test-runner.pythonExecutable')
-    routeToManage = atom.config.get('django-test-runner.routeToManage')
-    runCommand = pythonExec + " " + routeToManage + " test"
+    runCommand = pythonExec + " manage.py test"
     if additionalParameters
       return runCommand + " " + additionalParameters
     else
